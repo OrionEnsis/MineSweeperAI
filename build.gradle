@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id "net.ltgt.errorprone" version "0.0.16"
+    //id 'org.jetbrains.intellij' version '0.3.12'
+}
+
+group 'MineSweeperAI'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.9
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    errorprone("com.google.errorprone:error_prone_core:2.3.2")
+}
+
+apply plugin: 'java'
+apply plugin: 'net.ltgt.errorprone'
+
